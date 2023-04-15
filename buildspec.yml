@@ -1,0 +1,50 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - npm install -g yarn
+    dependencies:
+      @emotion/react: ^11.10.5",
+      @emotion/styled: "^11.10.5",
+      @material-ui/core: "^4.12.4",
+      @material-ui/icons: "^4.11.3",
+      @mui/material: "^5.10.13",
+      antd: "^4.24.1",
+      axios: "^0.25.0",
+      axios-hooks: "^3.0.0",
+      bcrypt: "^5.0.1",
+      dotenv: "^16.0.0",
+      eslint: "^8.26.0",
+      eslint-config-next: "13.0.1",
+      form-data: "^4.0.0",
+      json2yaml: "^1.1.0",
+      lodash: "^4.17.21",
+      moment: "^2.29.1",
+      next: "13.0.1",
+      react: "18.2.0",
+      react-content-loader: "^6.2.0",
+      react-device-detect: "^2.2.2",
+      react-dom: "18.2.0",
+      react-grid-system: "^8.1.6",
+      react-lodash: "^0.1.2",
+      react-paginate: "^8.1.4",
+      react-select: "^5.6.1",
+      styled-components: "^5.3.6"
+
+  pre_build:
+    commnads:
+      - yarn install
+  
+  build:
+    commands:
+      - yarn run build
+
+artifacts:
+  files:
+    - package.json
+    - package-lock.json
+    - .eslintrc.json
+  base-directory:
+    - dist
+    
