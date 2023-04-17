@@ -20,5 +20,4 @@ artifacts:
     - package-lock.json
     - .eslintrc.json
   base-directory:
-    - dist
-    
+    - 'dist'
